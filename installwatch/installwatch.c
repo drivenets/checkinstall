@@ -2957,10 +2957,10 @@ struct dirent *readdir(DIR *dir) {
 }
 
 #if (GLIBC_MINOR <= 4)
-int readlink(const char *path,char *buf,size_t bufsiz) {
+int readlink1(const char *path,char *buf,size_t bufsiz) {
 	int result;
 #else
-ssize_t readlink(const char *path,char *buf,size_t bufsiz) {
+ssize_t readlink1(const char *path,char *buf,size_t bufsiz) {
 	ssize_t result;
 #endif
 	instw_t instw;
